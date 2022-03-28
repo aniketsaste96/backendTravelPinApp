@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+
 //must configure env file
 const dotenv = require("dotenv");
 dotenv.config();
@@ -11,6 +12,7 @@ var bodyParser = require('body-parser');
 
 //before making api req must parse
 //act as middleware
+
 app.use(express.json())
 app.use(cors())
 // app.use(bodyParser.json())
@@ -31,13 +33,13 @@ app.use("/api/users", userRoute);
 
 
 
-
+const PORT = process.env.PORT || 5000
 
 
 
 
 //server listening
-app.listen(3001, () => console.log("server listening on 3001 😊"));
+app.listen(PORT, () => console.log(`server listening on ${PORT} 😊`));
 
 
 //ERROR's
