@@ -23,9 +23,9 @@ mongoose.connect(Url, { useNewUrlParser: true, useUnifiedTopology: true }).then(
     console.log("connected with DB");
 }).catch(err => console.log(err));
 
-app.use("/", (req, res) => {
-    res.send("HEllo World")
-})
+// app.use("/", (req, res) => {
+//     res.send("HEllo World")
+// })
 //routes
 
 app.use("/api/pins", pinRoute);
