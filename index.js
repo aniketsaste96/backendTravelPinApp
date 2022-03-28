@@ -12,9 +12,9 @@ var bodyParser = require('body-parser');
 
 //before making api req must parse
 //act as middleware
-
-app.use(express.json())
 app.use(cors())
+app.use(express.json())
+
 // app.use(bodyParser.json())
 
 //connect with database using mongoose
